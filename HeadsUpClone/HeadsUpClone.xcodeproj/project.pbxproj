@@ -18,6 +18,10 @@
 		BC60BBEE1B98149A00B597D5 /* CategoryTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = BC60BBED1B98149A00B597D5 /* CategoryTableViewController.swift */; };
 		BC60BBF01B9825C500B597D5 /* Settings.swift in Sources */ = {isa = PBXBuildFile; fileRef = BC60BBEF1B9825C500B597D5 /* Settings.swift */; };
 		BC60BBF21B9828C700B597D5 /* DetailsTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = BC60BBF11B9828C700B597D5 /* DetailsTableViewController.swift */; };
+		BC60BBF41B982CBF00B597D5 /* GamePlay.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = BC60BBF31B982CBF00B597D5 /* GamePlay.storyboard */; };
+		BC60BBF61B982D1600B597D5 /* GamePlayViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = BC60BBF51B982D1600B597D5 /* GamePlayViewController.swift */; };
+		BC60BBF81B98316300B597D5 /* ActionViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = BC60BBF71B98316300B597D5 /* ActionViewController.swift */; };
+		BC60BBFA1B9831E000B597D5 /* ReadyViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = BC60BBF91B9831E000B597D5 /* ReadyViewController.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -46,6 +50,10 @@
 		BC60BBED1B98149A00B597D5 /* CategoryTableViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CategoryTableViewController.swift; sourceTree = "<group>"; };
 		BC60BBEF1B9825C500B597D5 /* Settings.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Settings.swift; sourceTree = "<group>"; };
 		BC60BBF11B9828C700B597D5 /* DetailsTableViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DetailsTableViewController.swift; sourceTree = "<group>"; };
+		BC60BBF31B982CBF00B597D5 /* GamePlay.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = GamePlay.storyboard; sourceTree = "<group>"; };
+		BC60BBF51B982D1600B597D5 /* GamePlayViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = GamePlayViewController.swift; sourceTree = "<group>"; };
+		BC60BBF71B98316300B597D5 /* ActionViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ActionViewController.swift; sourceTree = "<group>"; };
+		BC60BBF91B9831E000B597D5 /* ReadyViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ReadyViewController.swift; sourceTree = "<group>"; };
 		BEEA0EA4E0D576F32D65BA35 /* Pods_HeadsUpClone.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_HeadsUpClone.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		D4EFCC25B023F5A1026D1CAD /* Pods-HeadsUpClone.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-HeadsUpClone.release.xcconfig"; path = "Pods/Target Support Files/Pods-HeadsUpClone/Pods-HeadsUpClone.release.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
@@ -119,6 +127,10 @@
 				BC60BBED1B98149A00B597D5 /* CategoryTableViewController.swift */,
 				BC60BBEF1B9825C500B597D5 /* Settings.swift */,
 				BC60BBF11B9828C700B597D5 /* DetailsTableViewController.swift */,
+				BC60BBF31B982CBF00B597D5 /* GamePlay.storyboard */,
+				BC60BBF51B982D1600B597D5 /* GamePlayViewController.swift */,
+				BC60BBF71B98316300B597D5 /* ActionViewController.swift */,
+				BC60BBF91B9831E000B597D5 /* ReadyViewController.swift */,
 			);
 			path = HeadsUpClone;
 			sourceTree = "<group>";
@@ -233,6 +245,7 @@
 			files = (
 				BC60BBD31B980DC900B597D5 /* Main.storyboard in Resources */,
 				BC60BBD81B980DC900B597D5 /* LaunchScreen.xib in Resources */,
+				BC60BBF41B982CBF00B597D5 /* GamePlay.storyboard in Resources */,
 				BC60BBD51B980DC900B597D5 /* Images.xcassets in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -301,7 +314,10 @@
 			files = (
 				BC60BBD01B980DC900B597D5 /* ViewController.swift in Sources */,
 				BC60BBCE1B980DC900B597D5 /* HeadsUpClone.xcdatamodeld in Sources */,
+				BC60BBF81B98316300B597D5 /* ActionViewController.swift in Sources */,
 				BC60BBCB1B980DC900B597D5 /* AppDelegate.swift in Sources */,
+				BC60BBFA1B9831E000B597D5 /* ReadyViewController.swift in Sources */,
+				BC60BBF61B982D1600B597D5 /* GamePlayViewController.swift in Sources */,
 				BC60BBEE1B98149A00B597D5 /* CategoryTableViewController.swift in Sources */,
 				BC60BBF21B9828C700B597D5 /* DetailsTableViewController.swift in Sources */,
 				BC60BBF01B9825C500B597D5 /* Settings.swift in Sources */,
