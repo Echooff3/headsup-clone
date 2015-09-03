@@ -54,7 +54,16 @@ class ReadyViewController: UIViewController {
                     names.addObject(t["name"] as! String)
                 }
             }
+            
             vc.selectedItems = names
+        }
+    }
+    
+    func shuffle(array: NSMutableArray) {
+        let count = array.count
+        for i in 0 ..< (count - 1) {
+            let j = Int(arc4random_uniform(UInt32(count - i))) + i
+            array.exchangeObjectAtIndex(i, withObjectAtIndex: j)
         }
     }
 }

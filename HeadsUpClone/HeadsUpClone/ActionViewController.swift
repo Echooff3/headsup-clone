@@ -14,10 +14,12 @@ class ActionViewController: UIViewController {
     var selectedItems = NSMutableArray(capacity: 0)
     var selectedIndex = 0
     var numCorrect = 0
+    var isProcessing:Bool = false
     let mm = CMMotionManager();
     
     @IBOutlet var txtClue:UILabel!
     override func viewDidLoad() {
+        self.isProcessing = false
         self.txtClue.text = self.selectedItems.objectAtIndex(selectedIndex) as? String
         mm.accelerometerUpdateInterval = 0.1
         
@@ -27,9 +29,17 @@ class ActionViewController: UIViewController {
         super.viewDidAppear(animated)
         self.selectedIndex = 0
         self.numCorrect = 0
+        self.isProcessing = false
         self.txtClue.text = self.selectedItems.objectAtIndex(selectedIndex) as? String
         mm.startAccelerometerUpdatesToQueue(NSOperationQueue.mainQueue(), withHandler: {
             [weak self] (data: CMAccelerometerData!, error: NSError!) in
+            if (self?.isProcessing != nil || self?.isProcessing == true) {
+                if data.acceleration.z == 0.0 {
+                    self?.isProcessing = false
+                }
+                return
+            }
+            self?.isProcessing = true
             if(data.acceleration.z > 0.9) {
                 self?.correct()
             } else if (data.acceleration.z < -0.9){
@@ -54,6 +64,7 @@ class ActionViewController: UIViewController {
         } else {
             self.txtClue.text = self.selectedItems.objectAtIndex(selectedIndex) as? String
         }
+        //isProcessing = false
     }
     
     func correct () {
