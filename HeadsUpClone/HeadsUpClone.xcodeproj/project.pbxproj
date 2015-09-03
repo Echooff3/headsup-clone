@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		51B0E9CF6E7347E709F5CD6A /* Pods_HeadsUpClone.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = BEEA0EA4E0D576F32D65BA35 /* Pods_HeadsUpClone.framework */; settings = {ATTRIBUTES = (Weak, ); }; };
 		BC60BBCB1B980DC900B597D5 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = BC60BBCA1B980DC900B597D5 /* AppDelegate.swift */; };
 		BC60BBCE1B980DC900B597D5 /* HeadsUpClone.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = BC60BBCC1B980DC900B597D5 /* HeadsUpClone.xcdatamodeld */; };
 		BC60BBD01B980DC900B597D5 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = BC60BBCF1B980DC900B597D5 /* ViewController.swift */; };
@@ -14,6 +15,8 @@
 		BC60BBD51B980DC900B597D5 /* Images.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = BC60BBD41B980DC900B597D5 /* Images.xcassets */; };
 		BC60BBD81B980DC900B597D5 /* LaunchScreen.xib in Resources */ = {isa = PBXBuildFile; fileRef = BC60BBD61B980DC900B597D5 /* LaunchScreen.xib */; };
 		BC60BBE41B980DC900B597D5 /* HeadsUpCloneTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = BC60BBE31B980DC900B597D5 /* HeadsUpCloneTests.swift */; };
+		BC60BBEE1B98149A00B597D5 /* CategoryTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = BC60BBED1B98149A00B597D5 /* CategoryTableViewController.swift */; };
+		BC60BBF01B9825C500B597D5 /* Settings.swift in Sources */ = {isa = PBXBuildFile; fileRef = BC60BBEF1B9825C500B597D5 /* Settings.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -27,6 +30,7 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		AE508CDC8D1A4C2A776C483A /* Pods-HeadsUpClone.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-HeadsUpClone.debug.xcconfig"; path = "Pods/Target Support Files/Pods-HeadsUpClone/Pods-HeadsUpClone.debug.xcconfig"; sourceTree = "<group>"; };
 		BC60BBC51B980DC900B597D5 /* HeadsUpClone.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = HeadsUpClone.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		BC60BBC91B980DC900B597D5 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		BC60BBCA1B980DC900B597D5 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
@@ -38,6 +42,10 @@
 		BC60BBDD1B980DC900B597D5 /* HeadsUpCloneTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = HeadsUpCloneTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		BC60BBE21B980DC900B597D5 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		BC60BBE31B980DC900B597D5 /* HeadsUpCloneTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HeadsUpCloneTests.swift; sourceTree = "<group>"; };
+		BC60BBED1B98149A00B597D5 /* CategoryTableViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CategoryTableViewController.swift; sourceTree = "<group>"; };
+		BC60BBEF1B9825C500B597D5 /* Settings.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Settings.swift; sourceTree = "<group>"; };
+		BEEA0EA4E0D576F32D65BA35 /* Pods_HeadsUpClone.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_HeadsUpClone.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		D4EFCC25B023F5A1026D1CAD /* Pods-HeadsUpClone.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-HeadsUpClone.release.xcconfig"; path = "Pods/Target Support Files/Pods-HeadsUpClone/Pods-HeadsUpClone.release.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -45,6 +53,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				51B0E9CF6E7347E709F5CD6A /* Pods_HeadsUpClone.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -58,12 +67,31 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		17CE7BC10D35584F127DCA61 /* Pods */ = {
+			isa = PBXGroup;
+			children = (
+				AE508CDC8D1A4C2A776C483A /* Pods-HeadsUpClone.debug.xcconfig */,
+				D4EFCC25B023F5A1026D1CAD /* Pods-HeadsUpClone.release.xcconfig */,
+			);
+			name = Pods;
+			sourceTree = "<group>";
+		};
+		289B01A23BE2012358A45DFA /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				BEEA0EA4E0D576F32D65BA35 /* Pods_HeadsUpClone.framework */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
 		BC60BBBC1B980DC900B597D5 = {
 			isa = PBXGroup;
 			children = (
 				BC60BBC71B980DC900B597D5 /* HeadsUpClone */,
 				BC60BBE01B980DC900B597D5 /* HeadsUpCloneTests */,
 				BC60BBC61B980DC900B597D5 /* Products */,
+				17CE7BC10D35584F127DCA61 /* Pods */,
+				289B01A23BE2012358A45DFA /* Frameworks */,
 			);
 			sourceTree = "<group>";
 		};
@@ -86,6 +114,8 @@
 				BC60BBD61B980DC900B597D5 /* LaunchScreen.xib */,
 				BC60BBCC1B980DC900B597D5 /* HeadsUpClone.xcdatamodeld */,
 				BC60BBC81B980DC900B597D5 /* Supporting Files */,
+				BC60BBED1B98149A00B597D5 /* CategoryTableViewController.swift */,
+				BC60BBEF1B9825C500B597D5 /* Settings.swift */,
 			);
 			path = HeadsUpClone;
 			sourceTree = "<group>";
@@ -122,9 +152,12 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = BC60BBE71B980DC900B597D5 /* Build configuration list for PBXNativeTarget "HeadsUpClone" */;
 			buildPhases = (
+				27772DBC8D82D9EE9754371F /* Check Pods Manifest.lock */,
 				BC60BBC11B980DC900B597D5 /* Sources */,
 				BC60BBC21B980DC900B597D5 /* Frameworks */,
 				BC60BBC31B980DC900B597D5 /* Resources */,
+				94481D35981D5899380B3A3A /* Embed Pods Frameworks */,
+				B387F6FEF3B7CDE88900EB2C /* Copy Pods Resources */,
 			);
 			buildRules = (
 			);
@@ -210,6 +243,54 @@
 		};
 /* End PBXResourcesBuildPhase section */
 
+/* Begin PBXShellScriptBuildPhase section */
+		27772DBC8D82D9EE9754371F /* Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "Check Pods Manifest.lock";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_ROOT}/../Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [[ $? != 0 ]] ; then\n    cat << EOM\nerror: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\nEOM\n    exit 1\nfi\n";
+			showEnvVarsInLog = 0;
+		};
+		94481D35981D5899380B3A3A /* Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "Embed Pods Frameworks";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-HeadsUpClone/Pods-HeadsUpClone-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		B387F6FEF3B7CDE88900EB2C /* Copy Pods Resources */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "Copy Pods Resources";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-HeadsUpClone/Pods-HeadsUpClone-resources.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+/* End PBXShellScriptBuildPhase section */
+
 /* Begin PBXSourcesBuildPhase section */
 		BC60BBC11B980DC900B597D5 /* Sources */ = {
 			isa = PBXSourcesBuildPhase;
@@ -218,6 +299,8 @@
 				BC60BBD01B980DC900B597D5 /* ViewController.swift in Sources */,
 				BC60BBCE1B980DC900B597D5 /* HeadsUpClone.xcdatamodeld in Sources */,
 				BC60BBCB1B980DC900B597D5 /* AppDelegate.swift in Sources */,
+				BC60BBEE1B98149A00B597D5 /* CategoryTableViewController.swift in Sources */,
+				BC60BBF01B9825C500B597D5 /* Settings.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -342,6 +425,7 @@
 		};
 		BC60BBE81B980DC900B597D5 /* Debug */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = AE508CDC8D1A4C2A776C483A /* Pods-HeadsUpClone.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				INFOPLIST_FILE = HeadsUpClone/Info.plist;
@@ -353,6 +437,7 @@
 		};
 		BC60BBE91B980DC900B597D5 /* Release */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = D4EFCC25B023F5A1026D1CAD /* Pods-HeadsUpClone.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				INFOPLIST_FILE = HeadsUpClone/Info.plist;
@@ -415,6 +500,7 @@
 				BC60BBE91B980DC900B597D5 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 		BC60BBEA1B980DC900B597D5 /* Build configuration list for PBXNativeTarget "HeadsUpCloneTests" */ = {
 			isa = XCConfigurationList;
@@ -423,6 +509,7 @@
 				BC60BBEC1B980DC900B597D5 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 
