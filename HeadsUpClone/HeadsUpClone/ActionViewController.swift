@@ -11,15 +11,23 @@ import Parse
 import CoreMotion
 
 class ActionViewController: UIViewController {
-    var selectedItems:NSArray?
+    var selectedItems = NSMutableArray(capacity: 0)
     var selectedIndex = 0
     var numCorrect = 0
     let mm = CMMotionManager();
     
     @IBOutlet var txtClue:UILabel!
     override func viewDidLoad() {
-        self.txtClue.text = self.selectedItems?.objectAtIndex(selectedIndex) as? String
+        self.txtClue.text = self.selectedItems.objectAtIndex(selectedIndex) as? String
         mm.accelerometerUpdateInterval = 0.1
+        
+    }
+    
+    override func viewDidAppear(animated: Bool) {
+        super.viewDidAppear(animated)
+        self.selectedIndex = 0
+        self.numCorrect = 0
+        self.txtClue.text = self.selectedItems.objectAtIndex(selectedIndex) as? String
         mm.startAccelerometerUpdatesToQueue(NSOperationQueue.mainQueue(), withHandler: {
             [weak self] (data: CMAccelerometerData!, error: NSError!) in
             if(data.acceleration.z > 0.9) {
@@ -29,24 +37,22 @@ class ActionViewController: UIViewController {
             }
             return
         })
+        self.navigationItem.setHidesBackButton(true, animated: true)
+        self.navigationController?.setNavigationBarHidden(true, animated: true)
     }
     
-    override func viewDidAppear(animated: Bool) {
-        super.viewDidAppear(animated)
-        self.selectedIndex = 0
-        self.numCorrect = 0
-        self.txtClue.text = self.selectedItems?.objectAtIndex(selectedIndex) as? String
-        
-        self.navigationItem
+    override func viewWillDisappear(animated: Bool) {
+        super.viewWillDisappear(animated)
+        mm.stopAccelerometerUpdates()
     }
     
     func advance () {
         selectedIndex = selectedIndex + 1
-        if(selectedIndex > selectedItems?.count || selectedIndex > 10) {
+        if(selectedIndex > (selectedItems.count - 1) || selectedIndex > 10) {
             selectedIndex = selectedIndex - 1
             self.performSegueWithIdentifier("Results", sender: self)
         } else {
-            self.txtClue.text = self.selectedItems?.objectAtIndex(selectedIndex) as? String
+            self.txtClue.text = self.selectedItems.objectAtIndex(selectedIndex) as? String
         }
     }
     

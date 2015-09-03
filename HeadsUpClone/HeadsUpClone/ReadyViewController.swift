@@ -54,7 +54,7 @@ class ReadyViewController: UIViewController {
                     names.addObject(t["name"] as! String)
                 }
             }
-            vc.selectedItems = names as [AnyObject]
+            vc.selectedItems = names
         }
     }
 }

@@ -106,10 +106,10 @@
             </objects>
             <point key="canvasLocation" x="2665" y="291"/>
         </scene>
-        <!--View Controller-->
+        <!--Results View Controller-->
         <scene sceneID="4k1-3s-zCW">
             <objects>
-                <viewController id="uYe-6v-Edu" sceneMemberID="viewController">
+                <viewController id="uYe-6v-Edu" customClass="ResultsViewController" customModule="HeadsUpClone" customModuleProvider="target" sceneMemberID="viewController">
                     <layoutGuides>
                         <viewControllerLayoutGuide type="top" id="kvs-LG-nrk"/>
                         <viewControllerLayoutGuide type="bottom" id="6iD-wc-Iw4"/>
@@ -117,8 +117,25 @@
                     <view key="view" contentMode="scaleToFill" id="2D3-ok-J0t">
                         <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="5" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Byw-cr-6nk">
+                                <rect key="frame" x="16" y="64" width="568" height="536"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="30"/>
+                                <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                        </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        <constraints>
+                            <constraint firstItem="Byw-cr-6nk" firstAttribute="leading" secondItem="2D3-ok-J0t" secondAttribute="leadingMargin" id="AL0-Op-iAG"/>
+                            <constraint firstAttribute="trailingMargin" secondItem="Byw-cr-6nk" secondAttribute="trailing" id="Bba-t2-9Ux"/>
+                            <constraint firstItem="6iD-wc-Iw4" firstAttribute="top" secondItem="Byw-cr-6nk" secondAttribute="bottom" id="wMu-hF-tgH"/>
+                            <constraint firstItem="Byw-cr-6nk" firstAttribute="top" secondItem="kvs-LG-nrk" secondAttribute="bottom" id="xTB-63-01l"/>
+                        </constraints>
                     </view>
+                    <connections>
+                        <outlet property="lblResults" destination="Byw-cr-6nk" id="e80-Xi-YxA"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="z3T-cg-JFW" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>

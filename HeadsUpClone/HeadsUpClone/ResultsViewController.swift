@@ -21,5 +21,15 @@ class ResultsViewController: UIViewController {
         let percent = CGFloat(right.floatValue / total.floatValue)
         let message = String(format: "You got %1.2f %% correct", percent)
         self.lblResults.text = message
+        
+        self.navigationItem.setHidesBackButton(true, animated: true)
+        self.navigationController?.setNavigationBarHidden(false, animated: true)
+    }
+    
+    override func viewDidLoad() {
+        let btnBack = UIBarButtonItem(title: "Start Over", style: UIBarButtonItemStyle.Plain, target: self, action: Selector("startOver:"))
+        
+        self.navigationItem.rightBarButtonItem = btnBack
+        
     }
 }
