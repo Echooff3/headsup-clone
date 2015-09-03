@@ -1,5 +1,5 @@
 //
-//  CategoryTableViewController.swift
+//  DetailsTableViewController.swift
 //  HeadsUpClone
 //
 //  Created by Skibicki III, John (CHI-FCB) on 9/3/15.
@@ -9,14 +9,14 @@
 import UIKit
 import Parse
 
-class CategoryTableViewController: UITableViewController, UIAlertViewDelegate, UITableViewDataSource, UITableViewDelegate {
+class DetailsTableViewController: UITableViewController, UITableViewDataSource, UITableViewDelegate, UIAlertViewDelegate {
     var addNew:UIAlertController!
     var items = NSMutableArray(capacity: 0)
-    let objName = "Cat"
-    var selectedObject:PFObject!
+    let objName = "Detail"
+    var parentObj:PFObject!
     
     override func viewDidLoad() {
-        self.title = "Categories"
+        self.title = self.parentObj!["name"] as? String
         super.viewDidLoad()
         let addBtn = UIBarButtonItem(title: "Add", style: UIBarButtonItemStyle.Plain, target: self, action: Selector("add:"))
         self.navigationItem.rightBarButtonItem = addBtn
@@ -25,9 +25,9 @@ class CategoryTableViewController: UITableViewController, UIAlertViewDelegate, U
     }
     
     func refresh() {
-        let q = PFQuery(className: self.objName)
-        q.fromLocalDatastore()
-        q.findObjectsInBackgroundWithBlock { (objects:[AnyObject]?, error: NSError?) -> Void in
+        let q = self.parentObj.relationForKey("Details").query()
+        q!.fromLocalDatastore()
+        q!.findObjectsInBackgroundWithBlock { (objects:[AnyObject]?, error: NSError?) -> Void in
             if error == nil {
                 self.items = NSMutableArray(array: objects!)
                 self.tableView.reloadData()
@@ -52,8 +52,9 @@ class CategoryTableViewController: UITableViewController, UIAlertViewDelegate, U
             let valueField = self.addNew.textFields![0] as! UITextField
             let value = valueField.text
             if(!value.isEmpty) {
-                let newCat = PFObject(className: self.objName, dictionary: ["name":value]);
-                newCat.pinInBackgroundWithBlock({ (_) in
+                let newDetail = PFObject(className: self.objName, dictionary: ["name":value]);
+                self.parentObj!.relationForKey("Details").addObject(newDetail)
+                self.parentObj.pinInBackgroundWithBlock({ (_) in
                     self.refresh()
                 })
             }
@@ -65,14 +66,8 @@ class CategoryTableViewController: UITableViewController, UIAlertViewDelegate, U
     
     //delegate methods
     override func tableView(tableView: UITableView, didSelectRowAtIndexPath indexPath: NSIndexPath) {
-        self.selectedObject = self.items.objectAtIndex(indexPath.row) as? PFObject
         self.performSegueWithIdentifier("Detail", sender: nil)
-    }
-    override func prepareForSegue(segue: UIStoryboardSegue, sender: AnyObject?) {
-        if(segue.identifier == "Detail") {
-            var vc = segue.destinationViewController as! DetailsTableViewController
-            vc.parentObj = self.selectedObject
-        }
+        
     }
     override func numberOfSectionsInTableView(tableView: UITableView) -> Int {
         return 1

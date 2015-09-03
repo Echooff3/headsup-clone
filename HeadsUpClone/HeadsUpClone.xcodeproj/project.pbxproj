@@ -17,6 +17,7 @@
 		BC60BBE41B980DC900B597D5 /* HeadsUpCloneTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = BC60BBE31B980DC900B597D5 /* HeadsUpCloneTests.swift */; };
 		BC60BBEE1B98149A00B597D5 /* CategoryTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = BC60BBED1B98149A00B597D5 /* CategoryTableViewController.swift */; };
 		BC60BBF01B9825C500B597D5 /* Settings.swift in Sources */ = {isa = PBXBuildFile; fileRef = BC60BBEF1B9825C500B597D5 /* Settings.swift */; };
+		BC60BBF21B9828C700B597D5 /* DetailsTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = BC60BBF11B9828C700B597D5 /* DetailsTableViewController.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -44,6 +45,7 @@
 		BC60BBE31B980DC900B597D5 /* HeadsUpCloneTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HeadsUpCloneTests.swift; sourceTree = "<group>"; };
 		BC60BBED1B98149A00B597D5 /* CategoryTableViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CategoryTableViewController.swift; sourceTree = "<group>"; };
 		BC60BBEF1B9825C500B597D5 /* Settings.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Settings.swift; sourceTree = "<group>"; };
+		BC60BBF11B9828C700B597D5 /* DetailsTableViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DetailsTableViewController.swift; sourceTree = "<group>"; };
 		BEEA0EA4E0D576F32D65BA35 /* Pods_HeadsUpClone.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_HeadsUpClone.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		D4EFCC25B023F5A1026D1CAD /* Pods-HeadsUpClone.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-HeadsUpClone.release.xcconfig"; path = "Pods/Target Support Files/Pods-HeadsUpClone/Pods-HeadsUpClone.release.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
@@ -116,6 +118,7 @@
 				BC60BBC81B980DC900B597D5 /* Supporting Files */,
 				BC60BBED1B98149A00B597D5 /* CategoryTableViewController.swift */,
 				BC60BBEF1B9825C500B597D5 /* Settings.swift */,
+				BC60BBF11B9828C700B597D5 /* DetailsTableViewController.swift */,
 			);
 			path = HeadsUpClone;
 			sourceTree = "<group>";
@@ -300,6 +303,7 @@
 				BC60BBCE1B980DC900B597D5 /* HeadsUpClone.xcdatamodeld in Sources */,
 				BC60BBCB1B980DC900B597D5 /* AppDelegate.swift in Sources */,
 				BC60BBEE1B98149A00B597D5 /* CategoryTableViewController.swift in Sources */,
+				BC60BBF21B9828C700B597D5 /* DetailsTableViewController.swift in Sources */,
 				BC60BBF01B9825C500B597D5 /* Settings.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
