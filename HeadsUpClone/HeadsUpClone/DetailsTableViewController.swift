@@ -25,9 +25,10 @@ class DetailsTableViewController: UITableViewController, UITableViewDataSource, 
     }
     
     func refresh() {
-        let q = self.parentObj.relationForKey("Details").query()
-        q!.fromLocalDatastore()
-        q!.findObjectsInBackgroundWithBlock { (objects:[AnyObject]?, error: NSError?) -> Void in
+        let q = PFQuery(className: self.objName)
+        q.whereKey("parent", equalTo: self.parentObj)
+        //q!.fromLocalDatastore()
+        q.findObjectsInBackgroundWithBlock { (objects:[AnyObject]?, error: NSError?) -> Void in
             if error == nil {
                 self.items = NSMutableArray(array: objects!)
                 self.tableView.reloadData()
@@ -52,9 +53,12 @@ class DetailsTableViewController: UITableViewController, UITableViewDataSource, 
             let valueField = self.addNew.textFields![0] as! UITextField
             let value = valueField.text
             if(!value.isEmpty) {
-                let newDetail = PFObject(className: self.objName, dictionary: ["name":value]);
-                self.parentObj!.relationForKey("Details").addObject(newDetail)
-                self.parentObj.pinInBackgroundWithBlock({ (_) in
+                let newDetail = PFObject(className: self.objName);
+                newDetail["name"] = value
+                newDetail["parent"] = self.parentObj
+                //let relation = self.parentObj!.relationForKey("Details")
+                //relation.addObject(newDetail)
+                newDetail.saveInBackgroundWithBlock({ (_) in
                     self.refresh()
                 })
             }

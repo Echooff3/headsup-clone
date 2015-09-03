@@ -28,7 +28,7 @@ class GamePlayViewController: UITableViewController {
     
     func refresh() {
         let q = PFQuery(className: self.objName)
-        q.fromLocalDatastore()
+        //q.fromLocalDatastore()
         q.findObjectsInBackgroundWithBlock { (objects:[AnyObject]?, error: NSError?) -> Void in
             if error == nil {
                 self.items = NSMutableArray(array: objects!)
@@ -43,6 +43,7 @@ class GamePlayViewController: UITableViewController {
     //delegate methods
     override func tableView(tableView: UITableView, didSelectRowAtIndexPath indexPath: NSIndexPath) {
         self.selectedObject = self.items.objectAtIndex(indexPath.row) as? PFObject
+        self.performSegueWithIdentifier("Ready", sender: self)
     }
     override func prepareForSegue(segue: UIStoryboardSegue, sender: AnyObject?) {
         if(segue.identifier == "Ready") {

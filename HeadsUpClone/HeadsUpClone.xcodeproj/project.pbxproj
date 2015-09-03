@@ -22,6 +22,8 @@
 		BC60BBF61B982D1600B597D5 /* GamePlayViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = BC60BBF51B982D1600B597D5 /* GamePlayViewController.swift */; };
 		BC60BBF81B98316300B597D5 /* ActionViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = BC60BBF71B98316300B597D5 /* ActionViewController.swift */; };
 		BC60BBFA1B9831E000B597D5 /* ReadyViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = BC60BBF91B9831E000B597D5 /* ReadyViewController.swift */; };
+		BC60BBFC1B9839A800B597D5 /* CoreMotion.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = BC60BBFB1B9839A800B597D5 /* CoreMotion.framework */; };
+		BC60BBFE1B983A2300B597D5 /* ResultsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = BC60BBFD1B983A2300B597D5 /* ResultsViewController.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -54,6 +56,8 @@
 		BC60BBF51B982D1600B597D5 /* GamePlayViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = GamePlayViewController.swift; sourceTree = "<group>"; };
 		BC60BBF71B98316300B597D5 /* ActionViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ActionViewController.swift; sourceTree = "<group>"; };
 		BC60BBF91B9831E000B597D5 /* ReadyViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ReadyViewController.swift; sourceTree = "<group>"; };
+		BC60BBFB1B9839A800B597D5 /* CoreMotion.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreMotion.framework; path = System/Library/Frameworks/CoreMotion.framework; sourceTree = SDKROOT; };
+		BC60BBFD1B983A2300B597D5 /* ResultsViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ResultsViewController.swift; sourceTree = "<group>"; };
 		BEEA0EA4E0D576F32D65BA35 /* Pods_HeadsUpClone.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_HeadsUpClone.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		D4EFCC25B023F5A1026D1CAD /* Pods-HeadsUpClone.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-HeadsUpClone.release.xcconfig"; path = "Pods/Target Support Files/Pods-HeadsUpClone/Pods-HeadsUpClone.release.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
@@ -63,6 +67,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				BC60BBFC1B9839A800B597D5 /* CoreMotion.framework in Frameworks */,
 				51B0E9CF6E7347E709F5CD6A /* Pods_HeadsUpClone.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -89,6 +94,7 @@
 		289B01A23BE2012358A45DFA /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
+				BC60BBFB1B9839A800B597D5 /* CoreMotion.framework */,
 				BEEA0EA4E0D576F32D65BA35 /* Pods_HeadsUpClone.framework */,
 			);
 			name = Frameworks;
@@ -131,6 +137,7 @@
 				BC60BBF51B982D1600B597D5 /* GamePlayViewController.swift */,
 				BC60BBF71B98316300B597D5 /* ActionViewController.swift */,
 				BC60BBF91B9831E000B597D5 /* ReadyViewController.swift */,
+				BC60BBFD1B983A2300B597D5 /* ResultsViewController.swift */,
 			);
 			path = HeadsUpClone;
 			sourceTree = "<group>";
@@ -315,6 +322,7 @@
 				BC60BBD01B980DC900B597D5 /* ViewController.swift in Sources */,
 				BC60BBCE1B980DC900B597D5 /* HeadsUpClone.xcdatamodeld in Sources */,
 				BC60BBF81B98316300B597D5 /* ActionViewController.swift in Sources */,
+				BC60BBFE1B983A2300B597D5 /* ResultsViewController.swift in Sources */,
 				BC60BBCB1B980DC900B597D5 /* AppDelegate.swift in Sources */,
 				BC60BBFA1B9831E000B597D5 /* ReadyViewController.swift in Sources */,
 				BC60BBF61B982D1600B597D5 /* GamePlayViewController.swift in Sources */,

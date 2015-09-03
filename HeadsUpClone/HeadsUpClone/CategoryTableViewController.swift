@@ -26,7 +26,7 @@ class CategoryTableViewController: UITableViewController, UIAlertViewDelegate, U
     
     func refresh() {
         let q = PFQuery(className: self.objName)
-        q.fromLocalDatastore()
+        //q.fromLocalDatastore()
         q.findObjectsInBackgroundWithBlock { (objects:[AnyObject]?, error: NSError?) -> Void in
             if error == nil {
                 self.items = NSMutableArray(array: objects!)
@@ -53,7 +53,7 @@ class CategoryTableViewController: UITableViewController, UIAlertViewDelegate, U
             let value = valueField.text
             if(!value.isEmpty) {
                 let newCat = PFObject(className: self.objName, dictionary: ["name":value]);
-                newCat.pinInBackgroundWithBlock({ (_) in
+                newCat.saveInBackgroundWithBlock({ (_) in
                     self.refresh()
                 })
             }

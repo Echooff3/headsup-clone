@@ -11,9 +11,15 @@ import Parse
 
 class ReadyViewController: UIViewController {
     var selectedObject:PFObject!
+    var items = NSMutableArray(capacity: 0)
     override func viewDidLoad() {
     }
     override func viewDidAppear(animated: Bool) {
+        //Get items
+        let q = PFQuery(className: "Detail")
+        q.whereKey("parent", equalTo: self.selectedObject)
+        var tmp = q.findObjects()
+        self.items = NSMutableArray(array: tmp!)
         NSNotificationCenter.defaultCenter().addObserver(self, selector: "rotated", name: UIDeviceOrientationDidChangeNotification, object: nil)
     }
     override func viewWillDisappear(animated: Bool) {
@@ -24,6 +30,8 @@ class ReadyViewController: UIViewController {
         if(UIDeviceOrientationIsLandscape(UIDevice.currentDevice().orientation))
         {
             println("landscape")
+            NSNotificationCenter.defaultCenter().removeObserver(self)
+            self.performSegueWithIdentifier("Action", sender: nil)
         }
         
         if(UIDeviceOrientationIsPortrait(UIDevice.currentDevice().orientation))
@@ -40,7 +48,13 @@ class ReadyViewController: UIViewController {
     override func prepareForSegue(segue: UIStoryboardSegue, sender: AnyObject?) {
         if(segue.identifier == "Action") {
             var vc = segue.destinationViewController as! ActionViewController
-            vc.selectedObject = self.selectedObject!
+            var names = NSMutableArray(capacity: 0)
+            for i in self.items {
+                if let t = i as? PFObject {
+                    names.addObject(t["name"] as! String)
+                }
+            }
+            vc.selectedItems = names as [AnyObject]
         }
     }
 }
